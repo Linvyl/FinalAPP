@@ -48,14 +48,7 @@ class Admin:
     
     def show_info(admin):
         print(f"{ admin.get_Admin_ID()}\t {admin.get_Admin_Name() }\t{ admin.get_Admin_Age()}\t{ admin.get_ContactAddress() }\t{ admin.get_Admin_Email()}\t{ admin.get_Admin_Personal_Email()}")
-    
-    def findByID(admin, Admin_ID):
-        searchResult = None
-        global listadmin
-        for st in admin.listadmin:
-                if (st.Admin_ID == Admin_ID):
-                    searchResult = st
-        return searchResult
+  
 class Customer:
     
     def __init__(customer,customer_ID , customer_Name , customer_Age, customer_Gender,customer_Email):
@@ -484,6 +477,4 @@ while True:
                 print(f"Worker ID:\t Worker Name\tWorker age\t Worker phone number\tShift\tJob\tDriving license")       
                 for i in listworker:
                       i.show_worker()   
-    elif action==13:
-        st=Admin.findByID(Admin_ID)
     print("\nYou must input digits!")
